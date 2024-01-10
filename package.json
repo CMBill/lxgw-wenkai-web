@@ -12,7 +12,8 @@
     "fonts",
     "*.css",
     "OFL.txt",
-    "VERSION"
+    "VERSION",
+    "README.md"
   ],
   "keywords": [
     "lxgw-wenkai",
