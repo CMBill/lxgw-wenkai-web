@@ -1,0 +1,29 @@
+{
+  "name": "lxgw-wenkai-web",
+  "version": "1.315.0",
+  "description": "Web font package for LXGW WenKai",
+  "main": "style.css",
+  "style": "style.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CMBill/lxgw-wenkai-web.git"
+  },
+  "files": [
+    "fonts",
+    "*.css",
+    "OFL.txt",
+    "VERSION"
+  ],
+  "keywords": [
+    "lxgw-wenkai",
+    "cjk",
+    "font",
+    "css"
+  ],
+  "author": "CM_Bill <callmebill@billw.cn>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CMBill/lxgw-wenkai-web/issues"
+  },
+  "homepage": "https://github.com/CMBill/lxgw-wenkai-web"
+}
