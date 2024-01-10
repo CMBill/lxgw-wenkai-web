@@ -32,7 +32,7 @@
 </html>
 ```
 
-这样引入 `style.css` 的可以调用仓库包含的所有字体，使用字体时以表格中所示 `font-family` 与 `font-weight` 在 CSS 中调用即可。
+这样引入的 `style.css` 可以调用仓库包含的所有字体，使用字体时以表格中所示 `font-family` 与 `font-weight` 在 CSS 中调用即可。
 
 | 字体                   | `font-family`            | `font-weight` |
 | ---------------------- | ------------------------ | ------------- |
@@ -51,10 +51,10 @@
 | LXGW Wenkai Bold       | `https://repositoryURL/fonts/lxgwwenkai-bold/result.css`        |
 | LXGW Wenkai Light      | `https://repositoryURL/fonts/lxgwwenkai-light/result.css`       |
 | LXGW WenKai Mono       | `https://repositoryURL/fonts/lxgwwenkaimono-regular/result.css` |
-| LXGW WenKai Mono Bold  | `https://repositoryURL/fonts/xgwwenkaimono-bold/result.css`     |
+| LXGW WenKai Mono Bold  | `https://repositoryURL/fonts/lxgwwenkaimono-bold/result.css`     |
 | LXGW WenKai Mono Light | `https://repositoryURL/fonts/lxgwwenkaimono-light/result.css`   |
 
-例如若只需调用 LXGW Wenkai Mono，则只需将链接替换为：
+例如若只需调用 LXGW Wenkai Mono，则只需引入：
 ```
 https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web/fonts/lxgwwenkaimono-regular/result.css
 ``` 
