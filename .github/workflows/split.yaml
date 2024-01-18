@@ -35,6 +35,8 @@ jobs:
             echo "@import url('./$font_name/result.css');" >> ./style.css
           done
           echo "${{ steps.down.outputs.tag_name }}" >> VERSION
+          mv VERSION fonts/VERSION
+          mv style.css fonts/style.css
           rm -rf ./tmp/
 
       - name: Auto Minify
@@ -42,9 +44,7 @@ jobs:
 
       - name: Commit files
         run: |
-          mv VERSION fonts/VERSION
-          mv style.css fonts/style.css
-          mv style.min.css fonts/style.min.css
+          # mv style.min.css fonts/style.min.css
           cd fonts || exit 1
           git init
           git config user.email github-actions[bot]@users.noreply.github.com
