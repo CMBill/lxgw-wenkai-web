@@ -18,7 +18,7 @@
 ```html
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web@latest/style.css" />
   <style>
     body {
       font-family: "LXGW WenKai";
@@ -47,12 +47,12 @@
 
 | 字体                   | 链接                                                            |
 | ---------------------- | --------------------------------------------------------------- |
-| LXGW Wenkai            | `https://repositoryURL/fonts/lxgwwenkai-regular/result.css`     |
-| LXGW Wenkai Bold       | `https://repositoryURL/fonts/lxgwwenkai-bold/result.css`        |
-| LXGW Wenkai Light      | `https://repositoryURL/fonts/lxgwwenkai-light/result.css`       |
-| LXGW WenKai Mono       | `https://repositoryURL/fonts/lxgwwenkaimono-regular/result.css` |
-| LXGW WenKai Mono Bold  | `https://repositoryURL/fonts/lxgwwenkaimono-bold/result.css`     |
-| LXGW WenKai Mono Light | `https://repositoryURL/fonts/lxgwwenkaimono-light/result.css`   |
+| LXGW Wenkai            | `https://repositoryURL/lxgwwenkai-regular/result.css`     |
+| LXGW Wenkai Bold       | `https://repositoryURL/lxgwwenkai-bold/result.css`        |
+| LXGW Wenkai Light      | `https://repositoryURL/lxgwwenkai-light/result.css`       |
+| LXGW WenKai Mono       | `https://repositoryURL/lxgwwenkaimono-regular/result.css` |
+| LXGW WenKai Mono Bold  | `https://repositoryURL/lxgwwenkaimono-bold/result.css`     |
+| LXGW WenKai Mono Light | `https://repositoryURL/lxgwwenkaimono-light/result.css`   |
 
 例如若只需调用 LXGW Wenkai Mono，则只需引入：
 ```
@@ -66,8 +66,9 @@ https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web/fonts/lxgwwenkaimono-regular/
 ### 使用 JsDelivr 的 CDN
 #### 最新版本
 ```
-https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web/style.css
+https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web@latest/style.css
 ```
+注意，分包后产生的字体和 CSS 文件位于 latest 分支，因此必须加上 `@latest`，否则无法访问到对应文件。
 
 #### 特定版本 
 将链接中的 `$VERSION` 替换为目标版本号，如 `1.315` 或 `v1.315` 均可。目前仅只提供 `v1.315` 之后的版本。
