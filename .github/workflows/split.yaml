@@ -32,7 +32,7 @@ jobs:
           do 
             font_name=$(echo "$i" | sed -E 's/(.+)\.ttf$/\1/i' | tr '[:upper:]' '[:lower:]')
             cn-font-split -i=./tmp/$i -o=./fonts/$font_name --renameOutputFont='[index][ext]'
-            echo "@import url('./fonts/$font_name/result.css');" >> ./style.css
+            echo "@import url('./$font_name/result.css');" >> ./style.css
           done
           echo "${{ steps.down.outputs.tag_name }}" >> VERSION
           rm -rf ./tmp/
