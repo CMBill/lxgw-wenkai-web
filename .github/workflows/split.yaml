@@ -52,8 +52,10 @@ jobs:
           git checkout -b latest
           git status
           git add . 
-          git commit -m "update ${{ steps.down.outputs.tag_name }}" -a
-          git tag ${{ steps.down.outputs.tag_name }}
+          git commit -m "update v1.315.1" -a
+          git tag v1.315.1
+          # git commit -m "update ${{ steps.down.outputs.tag_name }}" -a
+          # git tag ${{ steps.down.outputs.tag_name }}
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.8.0
