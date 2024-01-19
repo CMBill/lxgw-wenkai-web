@@ -10,7 +10,7 @@
 
 为使原字体更适合进行网络分发，本仓库使用 Github Action，利用[中文网字计划](https://chinese-font.netlify.app/)开发的[字体分包工具](https://github.com/KonghaYao/cn-font-split)对原字体分包，网页加载时只需获取所使用的文字所在的分包，大幅降低所需加载的大小，提升网页加载速度。
 
-为方便使用，本仓库的版本号将与字体原仓库版本号一致。目前只提供了 `v1.315` 及之后的版本。
+为方便使用，本仓库的版本号将与字体原仓库版本号尽量保持一致。目前只提供了 `v1.315` 及之后的版本。
 
 ## 使用
 直接将文后提供的链接以 `<link>` 的形式添加到网页的 `<head>` 内即可
@@ -71,13 +71,13 @@ https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web@latest/style.css
 注意，分包后产生的字体和 CSS 文件位于 latest 分支，因此必须加上 `@latest`，否则无法访问到对应文件。
 
 #### 特定版本 
-将链接中的 `$VERSION` 替换为目标版本号，如 `1.315` 或 `v1.315` 均可。目前仅只提供 `v1.315` 之后的版本。
+将链接中的 `$VERSION` 替换为目标版本号，具体详见本仓库的 [tags](https://github.com/CMBill/lxgw-wenkai-web/tags)，建议查阅后使用，如 `1.315` 或 `v1.315` 均可。目前仅只提供 `v1.315` 之后的版本。
 ```
 https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web@$VERSION/style.css
 ```
-例如请求 `v1.315` 版本的字体：
+例如请求 `v1.315.1` 版本的字体：
 ```
-https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web@1.315/style.css
+https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web@1.315.1/style.css
 ```
 
 ### 直接使用本仓库链接
