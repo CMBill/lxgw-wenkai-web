@@ -43,7 +43,7 @@ jobs:
 
       - name: Commit files
         run: |
-          # mv style.min.css fonts/style.min.css
+          mv index.html fonts/index.html
           cd fonts || exit 1
           git init
           git config user.email github-actions[bot]@users.noreply.github.com
