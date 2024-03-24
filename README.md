@@ -5,6 +5,9 @@
 >   - [霞鹜文楷 GB / LXGW WenKai GB](https://github.com/CMBill/lxgw-wenkai-gb-web)：调整字形和笔形，符合 G 源字形规范。包含《通用规范汉字表》8105 个汉字。
 >   - [霞鹜文楷 TC / LXGW WenKai TC](https://github.com/CMBill/lxgw-wenkai-tc-web)：繁体中文版。
 
+[![NPM Version](https://img.shields.io/npm/v/@callmebill/lxgw-wenkai-web?style=flat-square)](https://www.npmjs.com/package/@callmebill/lxgw-wenkai-web)
+[![JsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/@callmebill/lxgw-wenkai-web/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@callmebill/lxgw-wenkai-web)
+
 ## 简介
 [LXGW WenKai / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai) 是一款开源中文字体，基于 FONTWORKS 出品字体 Klee One 衍生。字体详情请参阅原字体仓库。
 
