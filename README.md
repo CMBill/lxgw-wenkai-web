@@ -5,7 +5,8 @@
 >   - [霞鹜文楷 GB / LXGW WenKai GB](https://github.com/CMBill/lxgw-wenkai-gb-web)：调整字形和笔形，符合 G 源字形规范。包含《通用规范汉字表》8105 个汉字。
 >   - [霞鹜文楷 TC / LXGW WenKai TC](https://github.com/CMBill/lxgw-wenkai-tc-web)：繁体中文版。
 
-[![NPM Version](https://img.shields.io/npm/v/@callmebill/lxgw-wenkai-web?style=flat-square)](https://www.npmjs.com/package/@callmebill/lxgw-wenkai-web)
+[![NPM Version](https://img.shields.io/npm/v/%40callmebill%2Flxgw-wenkai-web?labelColor=cb0000&color=ffffff)](https://www.npmjs.com/package/@callmebill/lxgw-wenkai-web)
+[![Cdnjs](https://img.shields.io/cdnjs/v/lxgw-wenkai-web?labelColor=ff6934&color=ebebeb)](https://cdnjs.com/libraries/lxgw-wenkai-web)
 [![JsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/@callmebill/lxgw-wenkai-web/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@callmebill/lxgw-wenkai-web)
 
 ## 简介
@@ -67,8 +68,9 @@ https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/lxgwwenkaimono-r
 如果下方提供的链接连接效果不甚理想，建议自行部署并配合自己的 CDN 使用。可以直接 Fork 本仓库并启用 Github Pages，使用时将下方链接修改为自己的仓库地址即可，亦可直接克隆本仓库到服务端、对象存储等。
 
 ### 使用 CDN
-#### 作为 npm 包（推荐）
-目前已作为 npm 包上传到 npmjs，可以使用 npm 包的镜像引用，如JsDelivr 的 npm 镜像：
+目前已作为 npm 包上传到 npmjs，可以使用 npm 包的镜像链接引用。
+
+#### 使用 JsDelivr 对 npm 包的 CDN（推荐）
 
 ```
 https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css
@@ -77,20 +79,13 @@ https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css
 也可指定版本号，将链接中的 `$VERSION` 替换为目标版本号（但 npm 的语义化版本号会省略版本号数字开头的 0，具体版本号建议先查询 [npmjs](https://www.npmjs.com/package/@callmebill/lxgw-wenkai-web?activeTab=versions)）如 `1.315` 或 `v1.315` 均可。目前仅只提供 `v1.315` 之后的版本。
 
 ```
-https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@VERSION/style.css
-
+https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@$VERSION/style.css
 ```
 
-#### 使用 JsDelivr 对 GitHub 仓库的 CDN
-**由于经测试 JsDelivr 对 Github 仓库的缓存更新时间较长且不确定，因此更建议使用上方 npm 包的链接**
+#### 使用 cdnjs 的 CDN
+目前已提交至 [cdnjs 仓库](https://cdnjs.com/libraries/lxgw-wenkai-web)，可以使用 cdnjs 提供的 cdn 链接。此方法必须指定版本号，将链接中的 `$VERSION` 替换为 npm 包的目标版本号。具体版本号可以查询 [npmjs](https://www.npmjs.com/package/@callmebill/lxgw-wenkai-web?activeTab=versions) 或 [cdnjs](https://cdnjs.com/libraries/lxgw-wenkai-web) 的页面。目前仅只提供 `v1.315` 之后的版本。
+
 ```
-https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web@latest/style.css
+https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-web/$VERSION/style.css
 ```
-注意，分包后产生的字体和 CSS 文件位于 latest 分支，因此必须加上 `@latest`，否则无法访问到对应文件。也可指定版本号，将链接中的 `$VERSION` 替换为目标版本号，具体详见本仓库的 [tags](https://github.com/CMBill/lxgw-wenkai-web/tags)，建议查阅后使用，如 `1.315` 或 `v1.315` 均可。目前仅只提供 `v1.315` 之后的版本。
-```
-https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web@$VERSION/style.css
-```
-例如请求 `v1.315.1` 版本的字体：
-```
-https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web@1.315.1/style.css
-```
+
