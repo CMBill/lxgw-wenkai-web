@@ -54,6 +54,16 @@ jobs:
           latest: true
           out-file-path: "tmp"
           fileName: '*.ttf'
+
+      - name: Check inputs Tag
+        run: |
+          if [ "${{ github.event.inputs.tag }}" != "null" ]; then
+            echo "tag_name=${{ github.event.inputs.tag }}" >> "$GITHUB_ENV"
+          else
+            echo "tag_name=${{ steps.down1.outputs.tag_name }}" >> "$GITHUB_ENV"
+          fi
+
+          echo "tag_name is $tag_name"
           
       - name: Show files
         run: |
@@ -63,23 +73,18 @@ jobs:
       - name: Split fonts
         run: |
           npm install @konghayao/cn-font-split -g
+          
           for i in $(echo "$(ls ./tmp)" | grep -i '\.ttf$')
           do
             font_name=$(echo "$i" | sed -E 's/(.+)\.ttf$/\1/i' | tr '[:upper:]' '[:lower:]')
             cn-font-split -i=./tmp/$i -o=./fonts/$font_name --renameOutputFont='[index][ext]'
-            echo "@import url('./$font_name/result.css');" >> ./style.css
+            echo "@import url('./$font_name/result.css');" >> ./$font_name-style.css
+            mv $font_name-style.css fonts/$font_name-style.css
           done
 
-          if [ "${{ github.event.inputs.tag }}" != "null" ]; then
-            echo "${{ github.event.inputs.tag }}" >> VERSION
-          else
-            echo "${{ steps.down1.outputs.tag_name }}" >> VERSION
-          fi
+          echo "$tag_name" >> VERSION
 
-      - name: mv files
-        run: |
           mv VERSION fonts/VERSION
-          mv style.css fonts/style.css
           rm -rf ./tmp/
           ls -a
 
@@ -96,13 +101,8 @@ jobs:
           git checkout -b latest
           git status
           git add .
-          if [ "${{ github.event.inputs.tag }}" != "null" ]; then
-            git commit -m "update ${{ github.event.inputs.tag }}" -a
-            git tag ${{ github.event.inputs.tag }}
-          else
-            git commit -m "update ${{ steps.down1.outputs.tag_name }}" -a
-            git tag ${{ steps.down1.outputs.tag_name }}
-          fi
+          git commit -m "update $tag_name" -a
+          git tag $tag_name
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.8.0
