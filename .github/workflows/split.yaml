@@ -32,7 +32,21 @@ jobs:
           for i in $(echo "$(ls ./tmp)" | grep -i '\.ttf$')
           do 
             font_name=$(echo "$i" | sed -E 's/(.+)\.ttf$/\1/i' | tr '[:upper:]' '[:lower:]')
-            cn-font-split -i=./tmp/$i -o=./fonts/$font_name --renameOutputFont='[index][ext]'
+            case "$font_name" in
+              *regular)
+                font_weight="400"
+                ;;
+              *light)
+                font_weight="300"
+                ;;
+              *bold)
+                font_weight="700"
+                ;;
+              *)
+                font_weight="400"
+                ;;
+            esac
+            cn-font-split -i=./tmp/$i -o=./fonts/$font_name --renameOutputFont='[index][ext]' --css.fontWeight=$font_weight
             echo "@import url('./$font_name/result.css');" >> ./style.css
           done
           echo "${{ steps.down.outputs.tag_name }}" >> VERSION
