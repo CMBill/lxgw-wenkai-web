@@ -65,7 +65,7 @@ https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/lxgwwenkaimono-r
 
 ## 链接
 ### 自行部署
-如果下方提供的链接连接效果不甚理想，建议自行部署并配合自己的 CDN 使用。可以直接 Fork 本仓库并启用 Github Pages，使用时将下方链接修改为自己的仓库地址即可，亦可直接克隆本仓库到服务端、对象存储等。
+如果下方提供的链接连接效果不甚理想，建议自行部署并配合自己的 CDN 使用，可以直接克隆本仓库到服务端、对象存储等。
 
 ### 使用 CDN
 目前已作为 npm 包上传到 npmjs，可以使用 npm 包的镜像链接引用。
