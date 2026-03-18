@@ -31,4 +31,9 @@
         "url": "https://github.com/CMBill/lxgw-wenkai-web/issues"
     },
     "homepage": "https://github.com/CMBill/lxgw-wenkai-web"
+    "publishConfig": {
+		"registry": "https://registry.npmjs.org",
+		"access": "public",
+		"provenance": true
+	}
 }
